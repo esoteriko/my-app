@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hola from './Hola';
 import Contador from './Contador';
+import TodoApp from './TodoApp';
 
 
 
@@ -18,6 +19,7 @@ class App extends React.Component {
           {/*Incluimos nuestro componente*/}
           <Hola nombre="Laura"/>
           <Contador/>
+          <TodoApp/>
         </div>
       </div>
     );
