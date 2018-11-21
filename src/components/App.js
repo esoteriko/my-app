@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Hola from './Hola';
 import Contador from './Contador';
 import TodoApp from './TodoApp';
+import Click from './Click';
 
 
 
@@ -20,6 +21,8 @@ class App extends React.Component {
           <Contador/>
           <TodoApp/>
           <Ejemplo/>
+          <Ejemplo1/>
+          <Click/>
         </div>
       </div>
     );
@@ -34,11 +37,33 @@ class Ejemplo extends React.Component{
     }
   }
   render(){
+    let variable = "Soy una variable de js"
     return(
-      <div>{this.state.name}</div>
+      <div>
+        <h2>{this.state.name}</h2>
+        <h2>{variable}</h2>
+      </div>
     );
   }
 }
+
+class Ejemplo1 extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      name: "soy un state pasada a una variable"
+  }
+  }
+  render(){
+  let variable= this.state.name
+    return(
+      <div>
+        <h3>{variable}</h3>
+      </div>
+    );
+  }
+}
+
 
 
 export default App;
