@@ -13,17 +13,31 @@ class App extends React.Component {
     return (      
       <div className="App">
         <div className="App-header">        
-          <h2>Hola Lu</h2>
+          <h2>Hola Luser</h2>
         </div>
-        <div className="App-intro">
-          {/*Incluimos nuestro componente*/}
-          <Hola nombre="Laura"/>
+        <div className="App-intro">          
+          <Hola nombre={Date()}/>
           <Contador/>
           <TodoApp/>
+          <Ejemplo/>
         </div>
       </div>
     );
   }  
+}
+
+class Ejemplo extends React.Component{
+  constructor(props){
+    super(props);
+    this.state ={
+      name: "Hola, soy un state"
+    }
+  }
+  render(){
+    return(
+      <div>{this.state.name}</div>
+    );
+  }
 }
 
 
