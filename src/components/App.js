@@ -14,7 +14,7 @@ class App extends React.Component {
     return (      
       <div className="App">
         <div className="App-header">        
-          <h2>Hola Lu</h2>
+          <h2>Hola Luser</h2>
         </div>
         <div className="App-intro">          
           <Hola nombre={Date()}/>
