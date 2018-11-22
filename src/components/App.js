@@ -23,6 +23,7 @@ class App extends React.Component {
           <Ejemplo/>
           <Ejemplo1/>
           <Click/>
+          <Condicional/>
         </div>
       </div>
     );
@@ -63,6 +64,38 @@ class Ejemplo1 extends React.Component{
     );
   }
 }
+
+ class Condicional extends React.Component{
+   constructor(props){
+     super(props);
+     this.state = {
+       variable: false
+     };
+     this.method = this.method.bind(this);     
+   }
+   method() {
+    this.setState({variable: true});
+  }
+   render(){
+     if(this.state.variable){
+     return(
+       <div>
+         <h1>Condicional</h1>
+         <button onClick={this.method}>accion</button>
+         <h1>UwU bien</h1>
+       </div>
+     );}
+     else{
+       return(
+         <div>
+           <h1>Condicional</h1>
+           <button onClick={this.method}>accion</button>
+           <h1>UwU mal</h1>
+         </div>
+       );
+     }
+   }
+ }
 
 
 
